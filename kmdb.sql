@@ -164,4 +164,26 @@ CREATE TABLE characters (
     actor_id
 );
 
+INSERT INTO movies (
+    title, 
+    date,
+    rating
+) VALUES (
+    "Batman Begins", "2005", "PG-13"
+);
 
+INSERT INTO movies (
+    title, 
+    date,
+    rating
+) VALUES (
+    "The Dark Knight", "2008", "PG-13"
+);
+
+INSERT INTO movies (
+    title, 
+    date,
+    rating
+) VALUES (
+    "The Dark Knight Rises", "2012", "PG-13"
+);    
