@@ -147,8 +147,7 @@ CREATE TABLE movies (
 
 CREATE TABLE studios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT,
-    movie_id INTEGER
+    name TEXT
 );
 
 CREATE TABLE actors (
@@ -192,9 +191,8 @@ INSERT INTO movies (
 );    
 
 INSERT INTO studios (
-    name,
-    movie_id
-) VALUES ("Warner Bros.", 1);
+    name
+) VALUES ("Warner Bros.");
 
 INSERT INTO actors (
     actor_name
@@ -329,3 +327,14 @@ INSERT INTO characters (
     actor_id,
     movie_id
 ) VALUES ("Selina Kyle", 11, 3);
+
+SELECT movies.title, movies.date, movies.rating, studios.name 
+FROM movies INNER JOIN studios 
+ON studios.id = movies.studio_id;
+
+
+
+
+
+
+
