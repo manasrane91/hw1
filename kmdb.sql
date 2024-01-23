@@ -153,37 +153,179 @@ CREATE TABLE studios (
 
 CREATE TABLE actors (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    actor_name TEXT,
-    movie_id INTEGER
+    actor_name TEXT
+
 );
 
 CREATE TABLE characters (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    character name TEXT,
-    movie_id INTEGER,
-    actor_id
+    character_name TEXT,
+    actor_id INTEGER,
+    movie_id INTEGER
 );
 
 INSERT INTO movies (
     title, 
     date,
-    rating
+    rating,
+    studio_id
 ) VALUES (
-    "Batman Begins", "2005", "PG-13"
+    "Batman Begins", "2005", "PG-13", 1
 );
 
 INSERT INTO movies (
     title, 
     date,
-    rating
+    rating,
+    studio_id
 ) VALUES (
-    "The Dark Knight", "2008", "PG-13"
+    "The Dark Knight", "2008", "PG-13", 1
 );
 
 INSERT INTO movies (
     title, 
     date,
-    rating
+    rating,
+    studio_id
 ) VALUES (
-    "The Dark Knight Rises", "2012", "PG-13"
+    "The Dark Knight Rises", "2012", "PG-13", 1
 );    
+
+INSERT INTO studios (
+    name,
+    movie_id
+) VALUES ("Warner Bros.", 1);
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Christian Bale");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Michael Caine");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Liam Neeson");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Katie Holmes");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Gary Oldman");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Heath Ledger");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Aaron Eckhart");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Maggie Gyllenhaal");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Tom Hardy");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Joseph Gordon-Levitt");
+
+INSERT INTO actors (
+    actor_name
+) VALUES ("Anne Hathaway");
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Bruce Wayne", 1, 1);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Alfred", 2, 1);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Ras Al Ghul", 3, 1);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Rachel Dawes", 4, 1);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Commisioner Gordon", 5, 1);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Bruce Wayne", 1, 2);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Joker", 6, 2);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Harvery Dent", 7, 2);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Alfred", 2, 2);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Rachel Dawes", 8, 2);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Bruce Wayne", 1, 3);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Commissioner Gordon", 5, 3);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Bane", 9, 3);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("John Blake", 10, 3);
+
+INSERT INTO characters (
+    character_name,
+    actor_id,
+    movie_id
+) VALUES ("Selina Kyle", 11, 3);
