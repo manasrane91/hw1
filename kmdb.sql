@@ -73,8 +73,12 @@
 
 -- Successful sample output is as shown:
 
+
+
 -- Movies
 -- ======
+
+
 
 -- Batman Begins          2005           PG-13  Warner Bros.
 -- The Dark Knight        2008           PG-13  Warner Bros.
@@ -82,6 +86,8 @@
 
 -- Top Cast
 -- ========
+
+
 
 -- Batman Begins          Christian Bale        Bruce Wayne
 -- Batman Begins          Michael Caine         Alfred
@@ -106,35 +112,13 @@
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
 
--- Create new tables, according to your domain model
--- TODO!
-
--- Insert data into your database that reflects the sample data shown above
--- Use hard-coded foreign key IDs when necessary
--- TODO!
-
--- Prints a header for the movies output
-.print "Movies"
-.print "======"
-.print ""
-
--- The SQL statement for the movies output
--- TODO!
-
--- Prints a header for the cast output
-.print ""
-.print "Top Cast"
-.print "========"
-.print ""
-
-
--- The SQL statement for the cast output
--- TODO!
-
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS studios;
 DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS characters;
+
+-- Create new tables, according to your domain model
+-- TODO!
 
 CREATE TABLE movies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -162,6 +146,10 @@ CREATE TABLE characters (
     actor_id INTEGER,
     movie_id INTEGER
 );
+
+-- Insert data into your database that reflects the sample data shown above
+-- Use hard-coded foreign key IDs when necessary
+-- TODO!
 
 INSERT INTO movies (
     title, 
@@ -328,10 +316,35 @@ INSERT INTO characters (
     movie_id
 ) VALUES ("Selina Kyle", 11, 3);
 
+-- Prints a header for the movies output
+.print "Movies"
+.print "======"
+.print ""
+
+
+
+-- The SQL statement for the movies output
+-- TODO!
+
 SELECT movies.title, movies.date, movies.rating, studios.name 
 FROM movies INNER JOIN studios 
 ON studios.id = movies.studio_id;
 
+-- Prints a header for the cast output
+.print ""
+.print "Top Cast"
+.print "========"
+.print ""
+
+
+
+-- The SQL statement for the cast output
+-- TODO!
+
+SELECT movies.title, actors.actor_name, characters.character_name 
+FROM movies INNER JOIN characters 
+ON characters.movie_id = movies.id
+INNER JOIN actors ON characters.actor_id = actors.id;
 
 
 
